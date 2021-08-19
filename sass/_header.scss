@@ -1,0 +1,93 @@
+
+.header {
+    width: 100%;
+    height: 56px;
+    padding: 0 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: -1px 4px 7px -3px rgba(152,152,152,0.89);
+
+    .left {
+        width: 33%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: auto;
+            height: $balandlik;
+        }    
+
+        .input{
+            position: relative;
+        
+            input {
+                width: 240px;
+                height: $balandlik;
+                border-radius: 100px;
+                border: none;
+                outline: none;
+                padding-left: 50px;
+                background-color: $kulrang;
+            
+            }
+
+            svg {
+                position: absolute;
+                left: 16px;
+                top: 8px;
+                fill: rgba(0, 0, 0, 0.459);
+            }
+        }
+    }
+
+
+    .middle {
+        width: 33%;
+        height: 100%;
+        padding: 5px 0;
+        gap: 30px;
+
+        @include flexCenter();
+
+        .svg-container {
+            width: 100px;
+            height: 100%;
+            border-radius: 10px;
+            @include flexCenter();
+
+            &:hover {
+                background-color: #f3f3f3;
+                cursor: pointer;
+            }
+
+            svg {
+                fill: #65676b
+            }
+        }
+    }
+
+    
+    .right {
+        width: 33%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+
+        svg-round-con {
+            width: 40px;
+            height: 40px;
+            background-color: #e7e7e7;
+    
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+        }
+    }
+}

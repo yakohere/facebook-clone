@@ -1,14 +1,19 @@
 
 .container {
     width: 100%;
-    height: calc(100vh - 56px);
+    min-height: 100vh;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     padding: 20px;
+    align-items: start;
     gap: 50px;
     padding-bottom: 0;
     
     .left {
+        position: sticky;
+        top: 70px;
+        height: 300px;
+        
         .navigation {
 
             .navigation-element {
@@ -62,6 +67,7 @@
                 }
             }
         }
+        
 
         
         .yozish {
@@ -72,41 +78,43 @@
             border-radius: 10px;
             
             .top {
-                display: flex;
+                @include flexCenter;
                 gap: 20px;
-
-                input {
+                height: 60px;
+ 
+                input { 
                     width: 100%;
+                    height: 50px; 
                     border-radius: 100px;
                     border: none;
                     background-color: #f3f3f3;
                     padding-left: 15px;
-
-                    &::placeholder {
-                        font-size: 18px;
-                    }
+                    font-size: 16px;
                 }
 
                 img {
                     width: 50px;
-                    height: 50xp;
+                    height: 50px;
                 }
             }
 
             hr {
-                margin-top: 10px;
-                border: 1px solid rgb(192, 192, 192);
+                margin-top: 20px;
+                height: 1px;
+                border: none;
+                background-color: #a1a1a1;
             }
 
             .bottom {
                 display: grid;
                 grid-template-columns: 1fr 1fr 1fr;
-                padding: 10px 10px;
+                padding: 0 10px;
+                padding-top: 10px;
 
                 .element {
                     padding: 10px 15px;
                     border-radius: 10px;
-                    font-size: 18px;
+                    font-size: 16px;
                     text-align: center;
                     cursor: pointer;
 
@@ -122,15 +130,124 @@
                 
             }
         }
+
+        .room-container {
+            width: 100%;
+            max-width: 690px;
+            height: 80px; 
+            margin: 30px 0;
+            border-radius: 10px;
+            @include flexCenter($gap: 15px);
+            justify-content: flex-start;
+            padding: 0 10px;
+            background-color: #fff;
+            overflow-x: scroll;
+
+            &::-webkit-scrollbar {
+                width: 0; 
+                background: transparent;
+                height: 0;
+            } 
+            
+            .xona-yasash {
+                @include flexCenter($gap: 10px);
+                padding: 5px 10px;
+                border: 1px solid #97c6f5;
+                border-radius: 100px;
+                min-width: 170px;
+            }
+
+            .xonalar {
+                width: 1500px;
+                height: 80px; 
+                @include flexCenter(row, 15px);
+                justify-content: flex-start;
+
+
+                .xona {
+                    width: 45px;
+                    height: 45px;
+                    
+                    img {
+                        width: 45px;
+                        height: 45px;    
+                    }
+                }
+            }
+        }
+
+        .post {
+            margin-bottom: 30px;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+
+            .post-header {
+                @include flexCenter;
+                justify-content: space-between;
+
+
+                .author {
+                    @include flexCenter($gap: 10px); 
+                    
+                    img {
+                        width: 45px;
+                        height: 45px;
+                    }
+
+                    div {
+
+                        p:last-child {
+                            color: rgb(139, 139, 139);
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+
+            .maqola {
+                p {
+                    
+                    margin: 15px 0;
+                }                
+
+                .image-container {
+                    width: 100%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .post-footer {
+                @include flexCenter;
+                justify-content: space-between;
+
+                div {
+                    height: 40px;
+                    width: 100%;
+                    @include flexCenter($gap: 10px);
+                    border-radius: 10px;
+
+                    &:hover {
+                        background-color: #f3f3f3;
+                    }
+                }
+            }
+        }
     }
 
     .right {
 
+        position: sticky;
+        top: 70px;
         .contacts {
             .contact {
                 @include flexCenter($gap: 10px);
                 margin-bottom: 20px;
-                
+                justify-content: flex-start;
+
                 .image-container {
                     width: 35px;
                     position: relative;

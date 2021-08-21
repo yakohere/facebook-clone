@@ -22,14 +22,24 @@ body {
 
 .container {
   width: 100%;
-  height: calc(100vh - 56px);
+  min-height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
   padding: 20px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   gap: 50px;
   padding-bottom: 0;
+}
+
+.container .left {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;
+  height: 300px;
 }
 
 .container .left .navigation .navigation-element {
@@ -113,41 +123,41 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
   gap: 20px;
+  height: 60px;
 }
 
 .container .middle .yozish .top input {
   width: 100%;
+  height: 50px;
   border-radius: 100px;
   border: none;
   background-color: #f3f3f3;
   padding-left: 15px;
-}
-
-.container .middle .yozish .top input::-webkit-input-placeholder {
-  font-size: 18px;
-}
-
-.container .middle .yozish .top input:-ms-input-placeholder {
-  font-size: 18px;
-}
-
-.container .middle .yozish .top input::-ms-input-placeholder {
-  font-size: 18px;
-}
-
-.container .middle .yozish .top input::placeholder {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .container .middle .yozish .top img {
   width: 50px;
-  height: 50xp;
+  height: 50px;
 }
 
 .container .middle .yozish hr {
-  margin-top: 10px;
-  border: 1px solid silver;
+  margin-top: 20px;
+  height: 1px;
+  border: none;
+  background-color: #a1a1a1;
 }
 
 .container .middle .yozish .bottom {
@@ -155,13 +165,14 @@ body {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  padding: 10px 10px;
+  padding: 0 10px;
+  padding-top: 10px;
 }
 
 .container .middle .yozish .bottom .element {
   padding: 10px 15px;
   border-radius: 10px;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   cursor: pointer;
   display: -webkit-box;
@@ -180,6 +191,209 @@ body {
   background-color: #f3f3f3;
 }
 
+.container .middle .room-container {
+  width: 100%;
+  max-width: 690px;
+  height: 80px;
+  margin: 30px 0;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 10px;
+  background-color: #fff;
+  overflow-x: scroll;
+}
+
+.container .middle .room-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  height: 0;
+}
+
+.container .middle .room-container .xona-yasash {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  padding: 5px 10px;
+  border: 1px solid #97c6f5;
+  border-radius: 100px;
+  min-width: 170px;
+}
+
+.container .middle .room-container .xonalar {
+  width: 1500px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.container .middle .room-container .xonalar .xona {
+  width: 45px;
+  height: 45px;
+}
+
+.container .middle .room-container .xonalar .xona img {
+  width: 45px;
+  height: 45px;
+}
+
+.container .middle .post {
+  margin-bottom: 30px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.container .middle .post .post-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .middle .post .post-header .author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+
+.container .middle .post .post-header .author img {
+  width: 45px;
+  height: 45px;
+}
+
+.container .middle .post .post-header .author div p:last-child {
+  color: #8b8b8b;
+  font-size: 12px;
+}
+
+.container .middle .post .maqola p {
+  margin: 15px 0;
+}
+
+.container .middle .post .maqola .image-container {
+  width: 100%;
+}
+
+.container .middle .post .maqola .image-container img {
+  width: 100%;
+}
+
+.container .middle .post .post-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .middle .post .post-footer div {
+  height: 40px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.container .middle .post .post-footer div:hover {
+  background-color: #f3f3f3;
+}
+
+.container .right {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 70px;
+}
+
 .container .right .contacts .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -196,6 +410,9 @@ body {
           flex-direction: row;
   gap: 10px;
   margin-bottom: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .container .right .contacts .contact .image-container {
@@ -233,6 +450,10 @@ body {
           justify-content: space-between;
   -webkit-box-shadow: -1px 4px 7px -3px rgba(152, 152, 152, 0.89);
           box-shadow: -1px 4px 7px -3px rgba(152, 152, 152, 0.89);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999;
 }
 
 .header .left {

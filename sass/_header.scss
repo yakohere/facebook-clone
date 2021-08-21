@@ -7,8 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     box-shadow: -1px 4px 7px -3px rgba(152,152,152,0.89);
+    position: sticky;
+    top: 0;
+    z-index: 99999999999999999999999999999999999999999999999999999999999999999999999999999999;
 
     .left {
         width: 33%;
